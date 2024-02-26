@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bingzhuo.ship.mapper.TaskMapper">
+    <select id="getTaskById" resultType="Task">
+      select * from task where task_id=#{taskId}
+    </select>
+
+    <insert id="saveTask" parameterType="Task" useGeneratedKeys="true"  keyProperty="taskId">
+        insert into task (is_splited,is_feature_exacted,is_clustered)
+        values(#{task.isSplited},#{task.isFeatureExacted},#{task.isClustered})
+    </insert>
+
+    <update id="updateTask" parameterType="Task">
+        update  task set file_path=#{task.filePath},is_splited=#{task.isSplited},
+                is_feature_exacted=#{task.isFeatureExacted},
+                is_clustered=#{task.isClustered} where task_id=#{task.taskId}
+    </update>
+</mapper>
