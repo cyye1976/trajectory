@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jinghui.api.mapper.InterpretationResultMapper">
+<!--    <select id="queryModelUtilization5Count" resultType="com.jinghui.api.dto.ModelUtilization5CountDto">-->
+<!--        select MD.`name` as name, COUNT(*) as value-->
+<!--        from interpretation_result as IR JOIN model as MD-->
+<!--        WHERE IR.model_id = MD.id-->
+<!--        GROUP BY MD.`name`-->
+<!--    </select>-->
+
+<!--    <select id="queryInterpretation" resultType="com.jinghui.api.entity.InterpretationResult">-->
+<!--        select * from interpretation_result-->
+<!--    </select>-->
+</mapper>
